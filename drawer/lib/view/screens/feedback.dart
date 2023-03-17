@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'drawerScreen.dart';
 
-class Body extends StatelessWidget {
-  Body({Key? key}) : super(key: key);
+class FeedbackScreen extends StatelessWidget {
   var g = Colors.grey[700];
   var b = Colors.black;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text('feedback'),
+      ),
+      drawer:  DrawerScreen(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -80,11 +85,6 @@ class Body extends StatelessWidget {
               ),
             )
           ],
-        ),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          
         ),
       ),
     );
