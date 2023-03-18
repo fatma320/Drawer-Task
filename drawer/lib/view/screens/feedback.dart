@@ -4,6 +4,7 @@ import 'drawerScreen.dart';
 class FeedbackScreen extends StatelessWidget {
   var g = Colors.grey[700];
   var b = Colors.black;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +12,7 @@ class FeedbackScreen extends StatelessWidget {
         elevation: 0,
         title: const Text('feedback'),
       ),
-      drawer:  DrawerScreen(),
+      drawer: DrawerScreen(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -23,28 +24,24 @@ class FeedbackScreen extends StatelessWidget {
                 height: 420,
               ),
             ),
-             Text(
+            Text(
               "Your Feedback",
               style: TextStyle(
-                  color: b,
-                  fontWeight: FontWeight.w800,
-                  fontSize: 22),
+                  color: b, fontWeight: FontWeight.w800, fontSize: 22),
             ),
             Container(
               margin: const EdgeInsets.only(top: 10),
               child: Text(
                 'Give your best time for this moment',
                 style: TextStyle(
-                    color: g,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600),
+                    color: g, fontSize: 18, fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
               width: 370,
               height: 120,
               child: Container(
-                margin: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(20, 10, 0, 0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     boxShadow: const [
@@ -65,22 +62,26 @@ class FeedbackScreen extends StatelessWidget {
                       ), //BoxShadow
                     ],
                   ),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 50),
-                    border: InputBorder.none,
-                    hintText: "Enter your feedback" ,
-                    hintStyle: TextStyle(color: Colors.grey , fontWeight: FontWeight.w500 , fontSize: 18),
-                  ),
-                )
-              ), ),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 50),
+                      border: InputBorder.none,
+                      hintText: "Enter your feedback",
+                      hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18),
+                    ),
+                  )),
+            ),
             Container(
-              margin: const EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
               child: SizedBox(
                 height: 50,
                 width: 150,
-                child: ElevatedButton(onPressed:(){}, child: const Text('Send'),
-
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Send'),
                 ),
               ),
             )
